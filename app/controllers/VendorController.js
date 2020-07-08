@@ -26,8 +26,7 @@ export default class VendorController {
     _vendorService.buy(price, quantity, index)
     _draw()
   }
-  _draw() {
-  }
+
 
 
 }
