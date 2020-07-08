@@ -9,27 +9,16 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
   <title>vendrrr</title>
 </head>
 
 <body>
+  <div id="target"></div>
+  <div class="row">
+    <div class="col-4"><button onclick="app.vendorController.addMoney()">Insert Quarters Only</div>
+    <div class="col-4">Your purchase:<span id="recent"></span></div>
+  </div>
 
-  <div class="row">
-    <div class="col-2">Vendrrr!</div>
-    <div class="col-3">1</div>
-    <div class="col-3">2</div>
-  </div>
-  <div class="row">
-    <div class="col-2">A</div>
-    <div class="col-3" id="target0"></div>
-    <div class="col-3" id="target1"></div>
-  </div>
-  <div class="row">
-    <div class="col-2">B</div>
-    <div class="col-3" id="target2"></div>
-    <div class="col-3" id="target3"></div>
-  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
