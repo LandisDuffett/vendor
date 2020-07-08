@@ -7,10 +7,8 @@ let _vendorService = new VendorService()
 function _draw() {
   let items = _vendorService.items
   for (let i = 0; i < items.length; i++) {
-    let item = new Target(items[i])
-    console.log(items[i].name);
-    document.getElementById(`target${i}`).innerHTML = item.Template;
-
+    let item = _vendorService(items[i])
+    document.getElementById(`item${i}`).innerHTML = item.Template;
   }
 }
 
