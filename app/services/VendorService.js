@@ -38,11 +38,11 @@ export default class VendorService {
     return items;
   }
 
-  buy(item) {
-    if (money >= item.price) {
-      money -= item.price;
-      item.quantity -= 1;
-      recent = `${item.name}`
+  buy(price, quantity, index) {
+    if (money >= items[index].price) {
+      money -= items[index].price;
+      items[index].quantity -= 1;
+      recent = `${items[index].name}`
       console.log(recent)
     }
   }
@@ -60,13 +60,13 @@ export default class VendorService {
       <div class="row">${items[0].name}</div>
       <div class="row">${items[0].price}</div>
       <div class="row">${items[0].quantity}</div>
-      <div class="row"><button onclick="app.vendorController.buy('${items[0]}')">BUY</button></div>
+      <div class="row"><button onclick="app.vendorController.buy('${items[0].price}', '${items[0].quantity}', 0)">BUY</button></div>
     </div>
     <div class="col-5">
       <div class="row">${items[1].name}</div>
       <div class="row">${items[1].price}</div>
       <div class="row">${items[1].quantity}</div>
-      <div class="row"><button onclick="app.vendorController.buy('${items[1]}')">BUY</button></div>
+      <div class="row"><button onclick="app.vendorController.buy('${items[1].price}', '${items[1].quantity}', 1)">BUY</button></div>
     </div>
   </div>
   <div class="row">
@@ -74,13 +74,13 @@ export default class VendorService {
     <div class="col-5"><div class="row">${items[2].name}</div>
       <div class="row">${items[2].price}</div>
       <div class="row">${items[2].quantity}</div>
-      <div class="row"><button onclick="app.vendorController.buy('${items[2]}')">BUY</button></div>
+      <div class="row"><button onclick="app.vendorController.buy('${items[2].price}', '${items[2].quantity}', 2)">BUY</button></div>
     </div>
     <div class="col-5">
           <div class="row">${items[3].name}</div>
           <div class="row">${items[3].price}</div>
           <div class="row">${items[3].quantity}</div>
-          <div class="row"><button onclick="app.vendorController.buy('${items[3]}')">BUY</button></div>
+          <div class="row"><button onclick="app.vendorController.buy('${items[3].price}', '${items[3].quantity}', 3)">BUY</button></div>
       </div>
     </div>`
     return subTemplate
