@@ -5,6 +5,8 @@ let _vendorService = new VendorService()
 
 function _draw() {
   document.getElementById("target").innerHTML = _vendorService.Template
+  debugger
+  document.getElementById("inserted").innerHTML = _vendorService.money.toString()
   document.getElementById("recent").innerHTML = _vendorService.recent
 }
 
@@ -17,6 +19,7 @@ export default class VendorController {
 
   addMoney() {
     _vendorService.moreMoney()
+    _draw()
   }
 
   buy(price, quantity, index) {
