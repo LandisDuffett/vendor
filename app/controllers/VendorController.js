@@ -1,10 +1,17 @@
 import VendorService from "../services/VendorService.js";
+import Target from "../models/Target.js";
 
 // PRIVATE AREA
 let _vendorService = new VendorService()
 
 function _draw() {
-  document.getElementById("target").innerHTML = _vendorService.Target.Template
+  let items = _vendorService.items
+  for (let i = 0; i < items.length; i++) {
+    let item = new Target(items[i])
+    console.log(items[i].name);
+    document.getElementById(`target${i}`).innerHTML = item.Template;
+
+  }
 }
 
 // PUBLIC AREA

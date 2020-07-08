@@ -1,12 +1,32 @@
 import Target from "../models/Target.js";
 
-let _target = new Target()
-let items = ["Doritos", "Mike and Ikes", "M&Ms", "Granola Bar"]
+let items = [
+  {
+    name: "Doritos",
+    price: 1.25,
+    quantity: 10
+  },
+  {
+    name: "Mike and Ikes",
+    price: 1.00,
+    quantity: 10
+  },
+  {
+    name: "M&Ms",
+    price: 1.50,
+    quantity: 10
+  },
+  {
+    name: "Granola Bar",
+    price: .75,
+    quantity: 10
+  }]
+
 export default class VendorService {
-
-  constructor() {
-
+  get items() {
+    return items;
   }
+
 
   buy(itemName) {
     money -= _target.price
